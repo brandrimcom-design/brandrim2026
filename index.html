@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brandrim | أفضل الخدمات الرقمية</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<header>
+  <div class="logo">Brandrim</div>
+  <nav>
+    <a href="#services" id="show-services-btn">عرض الخدمات</a>
+    <a href="#contact">اتصل بنا</a>
+    <a href="#privacy">سياسة الخصوصية</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Brandrim</h1>
+  <p>منصة احترافية لكل الخدمات الرقمية</p>
+  <a href="https://wa.me/212698490007" class="hero-btn" target="_blank">اطلب الآن عبر واتساب</a>
+</section>
+
+<!-- خدمات -->
+<section class="section" id="services">
+  <h2>خدماتنا</h2>
+  <div class="services">
+    <div class="card" data-name="تصميم مواقع">
+      <div class="discount">10% خصم</div>
+      <img src="images/web-design.jpg" alt="تصميم مواقع">
+      <h3>تصميم مواقع</h3>
+      <p>مواقع سريعة ومتجاوبة لجميع الأجهزة</p>
+      <p class="price">السعر: 1500 درهم</p>
+      <button class="buy-btn" onclick="addToCart('تصميم مواقع', 1500)">أضف للسلة</button>
+    </div>
+    <div class="card" data-name="متاجر رقمية">
+      <div class="discount">5% خصم</div>
+      <img src="images/digital-store.jpg" alt="متاجر رقمية">
+      <h3>متاجر رقمية</h3>
+      <p>بيع منتجاتك الرقمية بسهولة وأمان</p>
+      <p class="price">السعر: 2000 درهم</p>
+      <button class="buy-btn" onclick="addToCart('متاجر رقمية', 2000)">أضف للسلة</button>
+    </div>
+    <div class="card" data-name="إدارة سوشيال ميديا">
+      <img src="images/s1.jpg" alt="إدارة سوشيال ميديا">
+      <h3>إدارة سوشيال ميديا</h3>
+      <p>تنمية حساباتك بأسلوب احترافي</p>
+      <p class="price">السعر: 1200 درهم</p>
+      <button class="buy-btn" onclick="addToCart('إدارة سوشيال ميديا', 1200)">أضف للسلة</button>
+    </div>
+    <div class="card" data-name="IPTV">
+      <img src="images/iptv.jpg" alt="IPTV">
+      <h3>IPTV</h3>
+      <p>أحدث القنوات بجودة عالية</p>
+      <p class="price">السعر: 800 درهم</p>
+      <button class="buy-btn" onclick="addToCart('IPTV', 800)">أضف للسلة</button>
+    </div>
+    <div class="card" data-name="QR Code">
+      <img src="images/qrcode.jpg" alt="QR Code">
+      <h3>QR Code</h3>
+      <p>إنشاء أكواد QR مخصصة بسهولة</p>
+      <p class="price">السعر: 300 درهم</p>
+      <button class="buy-btn" onclick="addToCart('QR Code', 300)">أضف للسلة</button>
+    </div>
+    <div class="card" data-name="Site Web">
+      <img src="images/site-web.jpg" alt="Site Web">
+      <h3>Site Web</h3>
+      <p>خدمات مواقع متكاملة للأفراد والشركات</p>
+      <p class="price">السعر: 2500 درهم</p>
+      <button class="buy-btn" onclick="addToCart('Site Web', 2500)">أضف للسلة</button>
+    </div>
+  </div>
+</section>
+
+<!-- زر السلة في الوسط أسفل الخدمات -->
+<div class="cart-icon" onclick="toggleCart()">
+  <i class="fas fa-shopping-cart"></i>
+  <span class="cart-count" id="cart-count">0</span>
+</div>
+<div class="cart-box" id="cart-box">
+  <h4>سلة الشراء</h4>
+  <ul id="cart-list"></ul>
+  <p>عدد الطلبات: <span id="cart-count-2">0</span></p>
+  <button onclick="checkout()">إتمام الطلب عبر واتساب</button>
+</div>
+
+<!-- من نحن أسفل الخدمات -->
+<section class="section" id="about">
+  <h2>من نحن</h2>
+  <p>Brandrim منصة احترافية لتقديم جميع الخدمات الرقمية، هدفنا تسهيل أعمالك ورفع مستوى تواجدك الرقمي.</p>
+</section>
+
+<section class="section" id="contact">
+  <h2>اتصل بنا</h2>
+  <p>📞 <a href="tel:+212698490007">0698490007</a></p>
+  <p>📧 <a href="mailto:brandrim.com@gmail.com">brandrim.com@gmail.com</a></p>
+  <div class="social-icons">
+    <a href="https://wa.me/212698490007" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.facebook.com/yourpage" class="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/brandrim.ma" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
+</section>
+
+<footer class="footer">
+  <p style="text-align:center; margin-top:30px; font-size:14px; opacity:.8;">© 2026 Brandrim - جميع الحقوق محفوظة</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
